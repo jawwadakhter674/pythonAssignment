@@ -1,0 +1,122 @@
+Q1:
+person = {
+    'first_name':'Ali',
+    'last_name': 'jee',
+    'age': 23,
+    'city': 'Khi',
+    }
+print (person)
+person['Qualification']='BC in Computer Engineering'  
+print (person)
+del person['Qualification']
+print (person)
+
+OUTPut:
+{'first_name': 'Ali', 'last_name': 'jee', 'age': 23, 'city': 'Khi'}
+{'first_name': 'Ali', 'last_name': 'jee', 'age': 23, 'city': 'Khi', 'Qualification': 'BC in Computer Engineering'}
+{'first_name': 'Ali', 'last_name': 'jee', 'age': 23, 'city': 'Khi'}
+
+
+
+
+Q2:
+    'Karachi': {
+        'country': 'Pakistan',
+        'population':14910352,
+        'ranked': 'fifth',
+        },
+    'Istanbul': {
+        'country': 'Turkey',
+        'population': 82003882 ,
+        'ranked': '28th ',
+        },
+    'Kuala lumpur': {
+        'country': 'Maylaisa',
+        'population': 17310 ,
+        'ranked': '29th',
+        }
+    }
+
+for city, city_info in cities.items():
+    country = city_info['country'].title()
+    population = city_info['population']
+    ranked = city_info['ranked'].title()
+
+    print("\n" + city.title() + " is in " + country + ".")
+    print("  It has a population of about " + str(population) + ".")
+    print("  The " + ranked + " ranked in the world.")
+
+OUTPUT:
+Karachi is in Pakistan.
+  It has a population of about 14910352.
+  The Fifth ranked in the world.
+
+Istanbul is in Turkey.
+  It has a population of about 82003882.
+  The 28Th  ranked in the world.
+
+
+
+Q3:prompt += "\nEnter 'quit' when you are finished. "
+
+while True:
+    age = input(prompt)
+    if age == 'quit':
+        break
+    age = int(age)
+
+    if age < 3:
+        print("  You get in free!")
+    elif age < 13:
+        print("  Your ticket is $10.")
+    else:
+        print("  Your ticket is $15.")
+
+0UTPUT:
+How old are you?
+Enter 'quit' when you are finished. quit
+
+Q4:
+def favorite_book(title):
+    """Display a message about someone's favorite book."""
+    print(title + " is one of my favorite books.")
+0UTPUT:
+
+favorite_book('The Abstract Wild')
+The Abstract Wild is one of my favorite books.
+
+
+
+Q5:
+random=random.randint(1,30)
+print("================HINT================")
+if random>= 1 and random < 10:
+    print("try a number between 1 and 10")
+elif random>= 10 and random< 20:
+    print("try a number between 10 and 20")
+elif random>= 20 and random< 30:
+    print("try a number between 20 and 30")
+for i in range(0,3):
+    user = int(input("enter your guess: "))
+    if user < 1 or user > 30:
+        print("choose a number between 1 and 30")
+    else:
+        if user == random:
+            print("your guess is right")
+            break
+        else:
+            print("your guess is wrong")
+            print("============better luck next time :-)============")
+0UTPUT:
+
+================HINT================
+try a number between 20 and 30
+enter your guess: 1
+your guess is wrong
+============better luck next time :-)============
+enter your guess: 14
+your guess is wrong
+============better luck next time :-)============
+enter your guess: 23
+your guess is wrong
+============better luck next time :-)============
